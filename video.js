@@ -1,13 +1,13 @@
 // const express = require('express')
 const fs = require('fs')
-const path = require('path')
+const pathUtil = require('path')
 // const app = express()
 
 module.exports = async function (req, res) {
   
   try {
        
-    const path = 'assets/sample.mp4'
+    const path = pathUtil.resolve(__dirname, 'assets/sample.mp4')
     const stat = fs.statSync(path)
     const fileSize = stat.size
     const range = req.headers.range
