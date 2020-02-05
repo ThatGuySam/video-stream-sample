@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         { "src": "public/*", "use": "@now/static" },
-        { "src": "video.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
+        { "src": "video.js", "use": "@now/node" }
     ],
     "routes": [
         { "src": "/", "dest": "/public/index.html" },
